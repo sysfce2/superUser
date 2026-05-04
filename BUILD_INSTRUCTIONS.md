@@ -17,8 +17,8 @@ different systems (Windows, Linux, macOS) and architectures (Intel/AMD or Arm,
 | LLVM-MSVC     | Windows (all)<br />Linux<br />macOS | Intel/AMD      |
 | WinLibs<br />GCC-MinGW | Windows (x86/x64) | Intel/AMD               |
 | GCC-MinGW     | Linux<br />macOS    | Intel/AMD                      |
-| MSYS2         | Windows (x64)       | Intel/AMD                      |
-| MSYS2         | Windows 11 on Arm64 | Intel/AMD, Arm                 |
+| MSYS2         | Windows (x64)       | Intel/AMD (64-bit)             |
+| MSYS2         | Windows 11 on Arm64 | Intel/AMD, Arm (64-bit)        |
 | Cygwin        | Windows (x64)       | Intel/AMD                      |
 
 <br />
@@ -152,7 +152,6 @@ Do NOT install the packages `*ucrt*` indicated in the "_Installation_" procedure
 In the __MSYS2 UCRT64__ terminal, run:
 
 	pacman -S make
-	pacman -S mingw-w64-i686-gcc	# for 32-bit Intel/AMD executables
 	pacman -S mingw-w64-x86_64-gcc	# for 64-bit Intel/AMD executables
 
 Run the following command several times until all the packages are up-to-date:
@@ -165,7 +164,6 @@ When done, close the __MSYS2 UCRT64__ terminal.
 Open the terminal associated with the type of Intel/AMD executables you want to build:
 
 - For 64-bit executables: the __MSYS2 MINGW64__ terminal.
-- For 32-bit executables: the __MSYS2 MINGW32__ terminal.
 
 Then run:
 
